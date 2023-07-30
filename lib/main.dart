@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'features/presentation/views/splash_screen.dart';
+import 'constants.dart';
+import 'features/splash/presentation/views/splash_screen.dart';
 
 void main() {
   runApp(const Reads());
@@ -13,8 +13,10 @@ class Reads extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // GetX material app not the original one
-    return const GetMaterialApp(
-      home: SplashScreen(),
+    return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor),
+      home: const SplashScreen(),
     );
   }
 }
