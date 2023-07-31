@@ -1,3 +1,3 @@
-class Assetsdata {
+class AssetsData {
   static const logo = '';
 }
