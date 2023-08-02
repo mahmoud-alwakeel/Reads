@@ -35,9 +35,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  get: ^4.6.5
+  #get: ^4.6.5
   font_awesome_flutter: ^9.2.0
   http:
+  # changed get with go router as we are using it for navigation only
+  go_router: ^10.0.0
   # we used an older package of google fonts as the newest requires
   # a minimum dart sdk of 3.0.0 and the current i'm using is 2.19.3
   google_fonts: ^4.0.4

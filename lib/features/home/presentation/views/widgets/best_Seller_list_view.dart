@@ -9,8 +9,9 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       //take height of it's children
+      //shrinkWrap: true,
+      // to not make both scrollable we only made the whole app scrollable
       physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, index){

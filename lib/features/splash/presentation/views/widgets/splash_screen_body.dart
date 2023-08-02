@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:reads/constants.dart';
-import 'package:reads/features/home/presentation/views/home_screen.dart';
+import 'package:go_router/go_router.dart';
 import 'package:reads/features/splash/presentation/views/widgets/sliding_text.dart';
 
 // converted to stateful widget as we are going to use animation
@@ -80,11 +78,13 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), (){
-      // get makes navigation process easier (offcourse that's not the only use for it or even the main use)
-      Get.to(const HomeScreen(), transition: Transition.fadeIn, duration: kTransitionDuration);
+      GoRouter.of(context).push('/homeScreen');
     });
   }
 
 }
+// (Was using get before for routing)
+// get makes navigation process easier (offcourse that's not the only use for it or even the main use)
+//Get.to(const HomeScreen(), transition: Transition.fadeIn, duration: kTransitionDuration);
 
 
