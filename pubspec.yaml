@@ -44,6 +44,8 @@ dependencies:
   # a minimum dart sdk of 3.0.0 and the current i'm using is 2.19.3
   google_fonts: ^4.0.4
   equatable:
+  # good way for handling errors
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
