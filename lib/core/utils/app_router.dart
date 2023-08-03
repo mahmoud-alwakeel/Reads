@@ -20,6 +20,10 @@ abstract class AppRouter {
         path: '/bookDetailScreen',
         builder: (context, state) => const BookDetailsScreen(),
       ),
+      GoRoute(
+        path: '/searchScreen',
+        builder: (context, state) => const SplashScreen(),
+      ),
     ],
   );
 }
