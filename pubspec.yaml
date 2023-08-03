@@ -43,6 +43,7 @@ dependencies:
   # we used an older package of google fonts as the newest requires
   # a minimum dart sdk of 3.0.0 and the current i'm using is 2.19.3
   google_fonts: ^4.0.4
+  equatable:
 
 dev_dependencies:
   flutter_test:
