@@ -46,6 +46,7 @@ dependencies:
   equatable:
   # good way for handling errors
   dartz: ^0.10.1
+  dio: ^5.3.2
 
 dev_dependencies:
   flutter_test:
