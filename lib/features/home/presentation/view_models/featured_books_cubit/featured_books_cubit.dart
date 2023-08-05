@@ -5,6 +5,7 @@ import 'package:equatable/equatable.dart';
 import '../../../data/models/book_model/book_model.dart';
 
 part 'featured_books_states.dart';
+
 class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
   FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitialState());
 
@@ -19,5 +20,5 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     }, (books) {
       emit(FeaturedBooksSuccessState(books));
     });
-}
+  }
 }

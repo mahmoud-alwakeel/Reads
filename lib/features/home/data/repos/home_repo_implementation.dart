@@ -8,7 +8,8 @@ import 'package:reads/features/home/data/repos/home_repo.dart';
 
 // interface???????
 class HomeRepoImplementation implements HomeRepo {
-  late final ApiService apiService;
+  final ApiService apiService;
+  HomeRepoImplementation(this.apiService);
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
