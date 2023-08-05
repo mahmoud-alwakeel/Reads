@@ -15,7 +15,7 @@ class InsideBooksDetailsListView extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5.0),
-            child: CustomBookImage(),
+            child: CustomBookImage(imageUrl: 'https://justpublishingadvice.com/wp-content/uploads/2017/08/Promote-Books-With-Image-Links.png',),
           );
         },
 

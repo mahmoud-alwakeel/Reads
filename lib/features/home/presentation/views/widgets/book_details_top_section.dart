@@ -16,7 +16,7 @@ class BookDetailsTopSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .19),
-          child: const CustomBookImage(),
+          child: CustomBookImage(imageUrl: 'https://justpublishingadvice.com/wp-content/uploads/2017/08/Promote-Books-With-Image-Links.png',),
         ),
         const SizedBox(
           height: 43,
