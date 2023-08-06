@@ -15,6 +15,7 @@ class CustomBookImage extends StatelessWidget {
         // we put images in a container with a fixed height and width as not all images have the same size
         child: CachedNetworkImage(
           imageUrl: imageUrl,
+          fit: BoxFit.fill,
           placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
           errorWidget: (context, url, error) => const Icon(Icons.warning),
         ),

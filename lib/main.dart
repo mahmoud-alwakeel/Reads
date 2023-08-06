@@ -35,7 +35,7 @@ class Reads extends StatelessWidget {
         BlocProvider(
           create: (context) => NewestBooksCubit(
             getIt.get<HomeRepoImplementation>(),
-          ),
+          )..fetchNewestBooks(),
         ),
       ],
       // initial rout inn is the AppRouter class which is splash screen

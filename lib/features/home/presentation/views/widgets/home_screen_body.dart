@@ -11,6 +11,7 @@ class HomeScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     // to be able to scroll the entire screen not just the portion of the best seller list view
     return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       // slivers any widget you want to scroll
       slivers: [
         // to be able to add widgets
@@ -32,7 +33,7 @@ class HomeScreenBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  'Best seller',
+                  'Newest Books',
                   style: Styles.textStyle18,
                 ),
               ),
@@ -45,7 +46,7 @@ class HomeScreenBody extends StatelessWidget {
         const SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0),
-            child: BestSellerListView(),
+            child: NewestBooksListView(),
           ),
         ),
       ],

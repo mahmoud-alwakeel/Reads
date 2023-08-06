@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home/presentation/views/widgets/best_seller_list_view_item.dart';
+import '../../../../home/presentation/views/widgets/newest_books_list_view_item.dart';
 
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({Key? key}) : super(key: key);
@@ -14,9 +14,10 @@ class SearchResultListView extends StatelessWidget {
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0),
-          child: BooksListViewItem(),
+        return  Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          //child: BooksListViewItem(),
+          child: Text('data'),
         );
       },
     );
