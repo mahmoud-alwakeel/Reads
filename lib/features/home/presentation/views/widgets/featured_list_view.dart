@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:reads/core/widgets/custom_error_widget.dart';
 import 'package:reads/core/widgets/custom_progress_indicator.dart';
 import 'package:reads/features/home/presentation/view_models/featured_books_cubit/featured_books_cubit.dart';
@@ -23,8 +24,13 @@ class CustomBooksListView extends StatelessWidget {
                itemBuilder: (context, index) {
                  return  Padding(
                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                   child: CustomBookImage(
-                     imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail?? '',
+                   child: GestureDetector(
+                     onTap: (){
+                       GoRouter.of(context).push('/bookDetailScreen', extra: state.books[index]);
+                     },
+                     child: CustomBookImage(
+                       imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail?? '',
+                     ),
                    ),
                  );
                },

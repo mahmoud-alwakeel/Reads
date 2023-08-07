@@ -17,12 +17,13 @@ class InsideBooksDetailsListView extends StatelessWidget {
             // to make height responsive to the device size
             height:  MediaQuery.of(context).size.height * .14,
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.0),
-                  child: CustomBookImage(imageUrl: 'https://justpublishingadvice.com/wp-content/uploads/2017/08/Promote-Books-With-Image-Links.png',),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  child: CustomBookImage(
+                    imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail ?? '',),
                 );
               },
 
