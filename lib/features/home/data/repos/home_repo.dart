@@ -11,4 +11,5 @@ abstract class HomeRepo {
   // right side is when it's success
   Future<Either< Failure,List<BookModel>>> fetchNewestBooks();
   Future<Either< Failure,List<BookModel>>> fetchFeaturedBooks();
+  Future<Either< Failure,List<BookModel>>> fetchSimilarBooks({required String category});
 }
